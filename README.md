@@ -35,7 +35,7 @@ This dashboard focuses on purchase-order fulfilling performance of Vendors
 
 _**Dashhboard 03: Product Quality of Vendors**_
 
-This dashboard shows detailed information of purchased product quality such as Rejected quantity, Defected rate,...
+This dashboard shows detailed information of purchased product quality such as Rejected quantity, Defect rate,...
 ![image](https://github.com/user-attachments/assets/840cfc03-3e45-4df6-8fe7-5d7b2fb4ac97)
 
 ### **IV. Insight and Recommendation**
