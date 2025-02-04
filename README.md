@@ -36,21 +36,19 @@ This dashboard focuses on purchase-order fulfilling performance of Vendors
 _**Dashhboard 03: Product Quality of Vendors**_
 
 This dashboard shows detailed information of purchased product quality such as Rejected quantity, Defect rate,...
+
 ![image](https://github.com/user-attachments/assets/840cfc03-3e45-4df6-8fe7-5d7b2fb4ac97)
 
 ### **IV. Insight and Recommendation**
 
+![image](https://github.com/user-attachments/assets/cf13cbdb-ad92-43e9-bdfd-1cd60b51126e)
 
 ### **V. Used technical skills**
-_**1. Data Processing & Transformation**_
-- Power Query (ETL - Extract, Transform, Load) such as removing duplicates and errors, converting column formats, creating new calculated columns, ...
-- DAX (Data Analysis Expressions) such as creating dynamic calculations such as total sales, profit, and profit margin, building key measures, ...
+_**1. Data Extraction & Transformation (ETL)**_
+- Data Source Connection: Connected to the AdventureWorks2019 database
+- Power Query Editor: Cleaned and transformed raw data before loading it into the model.
+- Merging & Appending Queries: Combined multiple tables from the Purchasing schema to create a comprehensive dataset.
 
-_**2. Data Analysis**_
-- Key Metrics & KPIs such as Revenue, profit, and sales volume by category & country, Customer segments generating the highest revenue, ...
-- Trend Analysis such as Sales & Profit over time using time-series analysis, Year-over-Year (YoY) Growth Analysis, ...
-- Profitability Analysis such as Identifying products with the highest profit margins, Comparing profit margins across markets & product categories, ...
-
-_**3. Data Visualization**_
-Power BI Dashboard such as Bar & Line Charts, Matrix Table, Slicers & Filters, ...
-
+_**2. Data Visualization & Dashboard Design**_
+- KPI Cards: Displayed key indicators like Total Orders, Total Spend, Defect Rate, and Fulfillment Rate.
+- Bar & Line Charts: Visualized trends and comparisons across different years.
