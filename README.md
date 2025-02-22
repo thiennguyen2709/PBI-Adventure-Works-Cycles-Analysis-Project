@@ -1,54 +1,124 @@
-# Power BI - Adventure Works Cycles Analysis Project
-### **I. Project Assumption**
-AdventureWorks database supports standard online transaction processing scenarios for a fictitious bicycle manufacturer - Adventure Works Cycles. Scenarios include Manufacturing, Sales, Purchasing, Product Management, Contact Management, and Human Resources. In a manufacturing company, purchasing is one of the most important processes that require high-quality and on-time delivery so Purchase Manager always wants to control it real-time and continuously. As a data analyst, I need to explore, create operation dashboard and based on it to present insight and give recommendation to my Purchase Manager by using:
-- Data set: GoogleBigQuery\adventureworks2019.Purchasing
-- Data table:
-  + PurchaseOrderDetail (Fact table): Recording detailed information related to Purchase order
-  + PurchaseOrderHeader (Fact table): Recording information related to Purchase order
-  + ProductVendor (Dim table): Saving vendor ID and product ID respectively
-  + ShipMethod (Dim table): Categorize shipping methods
-  + Vendor (Dim table): Saving vendor information
-- Tool: Power BI
-### **II. Project Objectives**
-Exploring and visualizing data via operation dashboard to answer 3 key questions:
+# 📊 Power BI - Global Superstore Sales Project  
+Author: Nguyen Duc Thien  
+Date: 2024-11-11  
+Tools Used: Power BI 
+
+---
+
+## 📑 Table of Contents  
+1. [📌 Background & Overview](#-background--overview)  
+2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)   
+3. [📊 Key Insights & Visualizations](#-key-insights--visualizations)
+
+---
+
+## 📌 Background & Overview  
+
+### Objective:
+### 📖 What is this project about? 
+ 
+AdventureWorks database supports standard online transaction processing scenarios for a fictitious bicycle manufacturer - Adventure Works Cycles. Scenarios include Manufacturing, Sales, Purchasing, Product Management, Contact Management, and Human Resources. In a manufacturing company, purchasing is one of the most important processes that require high-quality and on-time delivery so Purchase Manager always wants to control it real-time and continuously.
+
+###  ❓Business Questions:  
 1. How is the purchasing performance of company?
 2. How is order fulfillment of Vendors?
-3. How is product quality of vendors?
-### **III. Data Modeling and Visualization**
+3. How is product quality of Vendors?
+
+### 🎯Project Outcome:  
+✅ Purchasing performance and trends: Purchase order quantity and value increased significantly, especially in 2013 and 2014
+✅ Fulfillment control: The fulfillment rates have significantly improved since 2013
+✅ Product quality control: The defect rates have significantly decreased in 2013 and 2014
+
+---
+
+## 📂 Dataset Description & Data Structure
+
+### 📊 Data Source, Data Structure & Relationships  
+
+#### 1️⃣ Tables Used:
+- Data source: GoogleBigQuery\adventureworks2019.Purchasing
+- Number of data tables: 5 tables
+
+#### 2️⃣ Table Schema & Data Snapshot  
+
+Table 1: ProductVendor
+- Size: 11 columns and 460 rows
+- Description: Saving vendor ID and product ID respectively  
+
+👉🏻 Insert a screenshot of table schema 
+
+Table 2: PurchaseOrderDetail
+- Size: 11 columns and 8845 rows
+- Description: Recording detailed information related to Purchase order   
+
+👉🏻 Insert a screenshot of table schema 
+
+Table 3: PurchaseOrderHeader
+- Size: 13 columns and 4012 rows
+- Description: Recording information related to Purchase order
+
+👉🏻 Insert a screenshot of table schema 
+
+Table 4: ShipMethod
+- Size: 6 columns and 5 rows
+- Description: Categorize shipping methods
+
+👉🏻 Insert a screenshot of table schema
+
+Table 5: Vendor
+- Size: 8 columns and 104 rows
+- Description: Saving vendor information
+
+👉🏻 Insert a screenshot of table schema
+
+
+#### 3️⃣ Data Relationships:  
 To standardize data, I create an additional tables called "Dim_date", "Dim_StatusName" and based on data of each table, I use Snowflake Schema to execute data modeling
 
-![image](https://github.com/user-attachments/assets/6f79c16c-8676-41d6-879f-ab8a92fa57c5)
+👉🏻 Include a screenshot of Data Modeling to visualize relationships.  
 
-Then, I visualize data via 3 dashboards which will solve 3 questions as mentioned above respectively:
+---
 
-_**Dashhboard 01: Procurement Overview**_
+## 📊 Key Insights & Visualizations  
 
-This dashboard provides general information related to purchasing performance of company
+### 🔍 Dashboard Preview  
 
-![image](https://github.com/user-attachments/assets/fb6d93e4-25fd-48f7-9d82-02a70cc08097)
+#### 1️⃣ Dashhboard 01: Procurement Overview
 
-_**Dashhboard 02: Order Fulfillment of Vendors**_
+👉🏻 Insert Power BI dashboard screenshots here  
 
-This dashboard focuses on purchase-order fulfilling performance of Vendors
+📌 Insight:
+- Purchase order quantity and value increased significantly, especially in 2013 and 2014.
+- The average purchase order quantity is approximately 600,000 units.
+- The average purchase value is around $16,000,000.
+-> This indicates that sales and production have also grown rapidly.
 
-![image](https://github.com/user-attachments/assets/90a084fb-16c5-448b-a368-09de416714ce)
+✅ Recommendation:
+- Monitor procurement trends to anticipate future demand and ensure supply chain stability.
+- Optimize inventory management to avoid overstocking or shortages during high-growth periods.
+- Negotiate better contracts with suppliers to accommodate increased purchase volumes and secure cost reductions.
 
-_**Dashhboard 03: Product Quality of Vendors**_
+#### 2️⃣ Dashhboard 02: Order Fulfillment of Vendors
 
-This dashboard shows detailed information of purchased product quality such as Rejected quantity, Defect rate,...
+👉🏻 Insert Power BI dashboard screenshots here
 
-![image](https://github.com/user-attachments/assets/840cfc03-3e45-4df6-8fe7-5d7b2fb4ac97)
+📌 Insight:
+- Fulfillment rates have significantly improved since 2013, indicating that vendors are more capable of meeting supply demands.
+- Some vendors (e.g., SUPERSALES INC.) receive a high number of orders but maintain a low fulfillment rate, which can negatively impact production efficiency and supply chain stability.
 
-### **IV. Insight and Recommendation**
+✅ Recommendation:
+- Diversify supplier base: Instead of relying on vendors with low fulfillment rates, find and onboard additional suppliers with higher reliability.
+- Implement vendor performance tracking: Regularly assess supplier fulfillment rates and adjust procurement strategies accordingly.
+- Negotiate service-level agreements (SLAs) to ensure better compliance with delivery commitments.
 
-![image](https://github.com/user-attachments/assets/cf13cbdb-ad92-43e9-bdfd-1cd60b51126e)
+#### 3️⃣ Dashhboard 03: Product Quality of Vendors
 
-### **V. Used technical skills**
-_**1. Data Extraction & Transformation (ETL)**_
-- Data Source Connection: Connected to the AdventureWorks2019 database
-- Power Query Editor: Cleaned and transformed raw data before loading it into the model.
-- Merging & Appending Queries: Combined multiple tables from the Purchasing schema to create a comprehensive dataset.
+👉🏻 Insert Power BI dashboard screenshots here  
 
-_**2. Data Visualization & Dashboard Design**_
-- KPI Cards: Displayed key indicators like Total Orders, Total Spend, Defect Rate, and Fulfillment Rate.
-- Bar & Line Charts: Visualized trends and comparisons across different years.
+📌 Insight:
+Despite the rapid increase in purchase order quantity, defect rates have significantly decreased in 2013 and 2014. This suggests that vendor product quality has improved, and procurement processes (vendor screening, filtering, and evaluation) are more effective.
+
+✅ Recommendation:
+- Strengthen partnerships with high-performing vendors who consistently deliver high-quality products.
+- Reduce dependency on low-performing vendors with high defect rates while investigating the root causes of quality issues.
+- Implement stricter quality control measures before finalizing purchase orders to maintain consistent product standards.
